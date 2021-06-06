@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="row">
+    <div class="col-md-5">
+      {% with messages = get_flashed_messages(with_categories=True)  %}
+      {% if messages %}
+      {% for category, message in messages %}
+      <div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      <div class="card card-body">
+        <form action="{{url_for('add_product')}}" method="POST">
+          <div class="form-group">
+            <input type="text" required="required" pattern="[A-Za-z- ]{1,40}" class="form-control" name="nProducto" placeholder="Nombre del Producto">
+          </div>
+          <div class="form-group">
+            <input type="number" required="required" step="1" min="1" class="form-control" name="cantidad" placeholder="Cantidad" value="0">
+          </div>
+          <div class="form-group">
+            <input type="number" required="required" step="0.01" min="1" class="form-control" name="precio" placeholder="Precio" value="0.00">
+          </div>
+          <button class="btn btn-primary btn-block">
+            Registrar 
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <table class="table table-striped table-hover table-bordered table-sm bg-white">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Nombre del Producto</td>
+            <td>Cantidad</td>
+            <td>Precio</td>
+            <td>Operaciones</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for product in sucursala %}
+          <tr>
+            <td>{{product.0}}</td>
+            <td>{{product.1}}</td>
+            <td>{{product.2}}</td>
+            <td>S/.{{product.3}}</td>
+            <td>
+              <a href="/editA/{{product.0}}" class="btn btn-secondary">editar</a>
+              <a href="/deleteA/{{product.0}}" class="btn btn-danger btn-delete">eliminar</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
