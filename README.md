@@ -54,6 +54,4 @@ Contraseña: admin1
 ```bash
 - Alvarez Aguilar Luis Alonso
 - Ylaquita Atencio Jorge
-- Mena Rivas Andree
-- Prentice Saraya Martin 
 ```
