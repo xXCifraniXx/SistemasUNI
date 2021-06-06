@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/updateA/{{product.0}}" method="POST">
+          <div class="form-group">
+            <h3>Nombre del Producto</h3>
+            <input type="text" required="required" pattern="[A-Za-z]{1,40}" name="nProducto" value="{{product.1}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <h3>Cantidad</h3>
+            <input type="number" required="required" step="1" min="1" name="cantidad" value="{{product.2}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <h3>Precio</h3>
+            <input type="number" required="required" step="0.05" min="1" name="precio" value="{{product.3}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Actualizar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
