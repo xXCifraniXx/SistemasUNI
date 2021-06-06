@@ -9,7 +9,7 @@
 
 Login       |  Principal | Editar       |  Sucursales
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<img src="docs/Login.png" title="Login" width="100%"> |<img src="docs/Inventario.png" title="Principal" width="100%">|<img src="https://user-images.githubusercontent.com/84888908/119761728-f5d6a980-be71-11eb-9d74-de6b72a3d696.png" title="Editar" width="100%"> |<img src="https://user-images.githubusercontent.com/84888908/119761730-f707d680-be71-11eb-90cc-df2b74dcbe52.png" title="Sucursales" width="100%">
+<img src="docs/Login.png" title="Login" width="100%"> |<img src="docs/Inventario.png" title="Principal" width="100%">|<img src="docs/Editar.png" title="Editar" width="100%"> |<img src="docs/Sucursales.png" title="Sucursales" width="100%">
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 # :pencil: Recursos utilizados
